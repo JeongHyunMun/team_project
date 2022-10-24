@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="o">
+
+	<!--  방명록 전체 조회 -->
+	<select id="memo_list" resultType="memo">
+	<!-- select는 반드시 resultType이 있어야 함 -->
+		select * from memo where id=#{id} order by idx DESC 
+	</select>
+	
+	<!-- 게시글 삭제 -->
+	<delete id="memo_delete" parameterType="int">
+		delete from memo where idx = #{idx}
+	</delete>
+	
+	<!-- 게시글 추가 -->
+	<insert id="memo_insert" parameterType="memo">
+		insert into memo values( seq_memo_idx.nextVal, #{id}, #{name}, #{title}, #{content}, #{pwd}, sysdate, #{filename} )
+	</insert>
+	
+	<!-- 수정을 위한 게시글 한 건 조회 -->
+	<select id="memo_one" resultType="memo" parameterType="int">
+		select * from memo where idx=#{idx}
+	</select>
+
+	<!-- 게시글 수정 -->
+	<update id="memo_update" parameterType="memo">
+		update memo set name=#{name}, content=#{content}, pwd=#{pwd}, regdate=sysdate
+		where idx=#{idx}
+	</update>
+
+</mapper>

@@ -1,0 +1,46 @@
+body {
+	background : url("/resources/img/book2.png");
+	 background-repeat : no-repeat;
+    background-size : cover;
+}
+#col {
+	background:#FFCC99;
+}
+#col2 {
+	background-color:white;
+}
+#history {
+	margin:auto;
+	display:block;
+	
+}
+
+#history_box {
+	width:auto;
+	margin:0 auto;
+}
+
+#chart_div {
+	margin:0 auto;
+	text-align:center;
+}
+
+#title {
+	font-size:25px;
+	font-weight:bold;
+	margin-left:20px;
+}
+
+.my-header {
+	text-align:center;
+}
+#add {
+	margin:0 auto;
+	text-align:center;
+}
+
+
+#add .f1{
+			margin:auto;
+	display:block;
+}

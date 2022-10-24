@@ -1,0 +1,62 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background : url("/resources/img/book.jpg");
+   
+    background-repeat : no-repeat;
+    background-size : cover;
+}
+
+#main_box {
+	width: auto;
+	margin: 0 auto;	
+	
+}
+
+
+
+.visit_box {
+	margin: 0 auto;
+	width: 350px;
+	height: 300px;
+	margin-top: 30px;
+	display : inline-block;
+	border:solid 2px #cccccc; 
+    box-sizing:border-box;  margin-top:20px; display:inline-block;
+	margin-left : 70px;
+	overflow:auto;
+	box-shadow: 0.8em;
+}
+.type_title {
+	background: linear-gradient(#bdc3c7, #2c3e50);
+	color:white;
+}
+
+.type_content {
+	
+	min-height: 240px;
+	height:auto;
+
+	border:1px solid #dddddd;
+	
+}
+
+.type_name {
+	background: #cfc;
+}
+
+.type_regdate {
+	background: #ccf;
+}
+.type_btn {
+	background: linear-gradient(#bdc3c7, #2c3e50);
+	color: white;
+	border: 1px solid #bbbbbb;
+}
+
+#regdate {
+	float: right;
+	color:#aaaaaa;
+}

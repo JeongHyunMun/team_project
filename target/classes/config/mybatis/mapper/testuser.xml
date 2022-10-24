@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="c">
+	<!-- <resultMap id="calendarRM" type="CalendarVO"> <id property="calendarNo" 
+		column="CALENDAR_NO" /> <result property="calendarTitle" column="CALENDAR_TITLE" 
+		/> <result property="calendarMemo" column="CALENDAR_MEMO" /> <result property="calendarStart" 
+		column="CALENDAR_START" /> <result property="calendarEnd" column="CALENDAR_END" 
+		/> </resultMap> -->
+
+	<select id="calendarList" resultType="calen"
+		parameterType="String">
+		select * from calendar where CALENDAR_ID =
+		#{CALENDAR_ID}
+	</select>
+	<insert id="calendar_insert" parameterType="calen">
+		insert into calendar values(#{CALENDAR_ID}, CALENDAR_NO_SEQ.NEXTVAL,
+		#{CALENDAR_TITLE}, #{CALENDAR_MEMO}, #{CALENDAR_START},
+		#{CALENDAR_END})
+	</insert>
+	<update id="calendar_update" parameterType="calen">
+		update calendar set CALENDAR_ID = #{CALENDAR_ID},CALENDAR_TITLE=
+		#{CALENDAR_TITLE},CALENDAR_MEMO=#{CALENDAR_MEMO},CALENDAR_START=
+		#{CALENDAR_START},CALENDAR_END=#{CALENDAR_END}
+		where CALENDAR_NO = #{CALENDAR_NO}
+	</update>
+	<select id="calendar_one" parameterType="int" resultType="calen">
+		select * from calendar where CALENDAR_NO = #{CALENDAR_NO}
+	</select>
+	<delete id="calendar_delete" parameterType="int">
+	delete from calendar where CALENDAR_NO = #{CALENDAR_NO}
+	</delete>
+</mapper>

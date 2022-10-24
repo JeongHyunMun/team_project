@@ -1,0 +1,61 @@
+*{margin: 0; padding: 0;}
+    #background video{ display: inline-block;
+    width: auto\9 !important; /* ie8 */
+    width: auto !important;
+    max-width: 100%;
+    height: auto !important;}
+    #background { position: relative;
+    height: 0;
+    padding-bottom: 56.25%;
+    overflow: hidden;}
+    
+    .btngroup{ position: absolute; top: 10%; width: 100%; text-align: center;}
+    .btngroup .login table {
+        width:50%;
+        height: 100%;
+        
+    }
+    .btngroup h3 {
+        color:white;
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    
+
+    .btngroup .login table, tr,td {
+        background: none;
+        border:none;
+    }
+    .btngroup .login table tr td input {
+        width: 100%;
+        height: 33px;
+        border-radius: 0.8em;
+        margin-bottom:2%;
+        color:white;
+        background-color:deepskyblue;
+        border:none;
+    }
+
+    .btngroup .login table tr td .login_input {
+        font-size :20px;
+        padding-left: 20px;
+        
+        
+    }
+  
+    .btngroup .login table tr td .login_input{
+        width: 100%; 
+        height: 100%;
+        background-color: none;
+        background: none;
+        border:none;
+        border-bottom: 3px solid mediumaquamarine;
+
+    }
+
+    .btn_item {
+        width: 100px;
+        height: 100px;
+        display: inline-block; /*이부분에 성질을 inline-block로 바꿔줘서 가로배치를 해줬다.*/
+        /* vertical-align: top; 밑에 4px 여백을 없에는것 */
+}
