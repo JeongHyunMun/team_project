@@ -1,6 +1,7 @@
 # Diary's
-<hr>
 
+# 목적
+code gg
 
 # Project 기간
 2022.08 ~ 2022.10
